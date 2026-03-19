@@ -1,0 +1,131 @@
+[
+  {
+    "product_id": 1,
+    "product_title": "iPhone 15 Pro",
+    "product_image": "https://i.ibb.co.com/ZRMKNyMN/i-Phone-15-Plus.jpg",
+    "category": "phone",
+    "price": 1199,
+    "description": "Apple iPhone 15 Pro with A17 Pro chip and advanced camera system.",
+    "specification": {
+      "display": "6.1-inch Super Retina XDR",
+      "processor": "A17 Pro",
+      "storage": "256GB",
+      "camera": "48MP Triple Camera",
+      "battery": "Up to 23 hours video playback"
+    },
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": 2,
+    "product_title": "Samsung Galaxy S24 Ultra",
+    "product_image": "https://i.ibb.co.com/zVvc24Kv/Galaxy-S24-Ultra-Titanium-Black.webp",
+    "category": "phone",
+    "price": 1299,
+    "description": "Samsung flagship phone with 200MP camera and S Pen.",
+    "specification": {
+      "display": "6.8-inch AMOLED",
+      "processor": "Snapdragon 8 Gen 3",
+      "storage": "512GB",
+      "camera": "200MP Quad Camera",
+      "battery": "5000mAh"
+    },
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": 3,
+    "product_title": "MacBook Air M3",
+    "product_image": "https://i.ibb.co.com/hR5nKns8/Mac-Book-Air-M3-13-Inch-Midnight-7621.jpg",
+    "category": "laptop",
+    "price": 1399,
+    "description": "Ultra-thin laptop powered by Apple M3 chip.",
+    "specification": {
+      "display": "13.6-inch Liquid Retina",
+      "processor": "Apple M3",
+      "ram": "16GB",
+      "storage": "512GB SSD",
+      "battery": "Up to 18 hours"
+    },
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "product_id": 4,
+    "product_title": "Dell XPS 13",
+    "product_image": "https://i.ibb.co.com/0pD2kDKr/xps-13-9310-side-500x500.jpg",
+    "category": "laptop",
+    "price": 1249,
+    "description": "Premium ultrabook with InfinityEdge display.",
+    "specification": {
+      "display": "13.4-inch FHD+",
+      "processor": "Intel Core i7",
+      "ram": "16GB",
+      "storage": "512GB SSD",
+      "battery": "Up to 12 hours"
+    },
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": 5,
+    "product_title": "Sony WH-1000XM5",
+    "product_image": "https://i.ibb.co.com/wrdqXn0F/20220704-1656928394-640411.jpg",
+    "category": "accessories",
+    "price": 399,
+    "description": "Noise cancelling wireless headphones with premium sound.",
+    "specification": {
+      "type": "Over-ear",
+      "connectivity": "Bluetooth 5.2",
+      "battery": "30 hours",
+      "noise_cancellation": "Active Noise Cancellation"
+    },
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": 6,
+    "product_title": "Anker 20000mAh Power Bank",
+    "product_image": "https://i.ibb.co.com/zTMsQ7LT/Anker-20000m-Ah-Power-Bank.jpg",
+    "category": "accessories",
+    "price": 49,
+    "description": "High capacity power bank with fast charging.",
+    "specification": {
+      "capacity": "20000mAh",
+      "output": "20W Fast Charge",
+      "ports": "USB-C, USB-A"
+    },
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product_id": 7,
+    "product_title": "Logitech MX Master 3S",
+    "product_image": "https://i.ibb.co.com/qFVkjc6F/logitech-mx-master-3s-01-500x500.jpg",
+    "category": "accessories",
+    "price": 99,
+    "description": "Advanced productivity wireless mouse.",
+    "specification": {
+      "dpi": "8000 DPI",
+      "battery": "70 days",
+      "connectivity": "Bluetooth / USB Receiver"
+    },
+    "availability": false,
+    "rating": 4.7
+  },
+  {
+    "product_id": 8,
+    "product_title": "Samsung T7 Portable SSD",
+    "product_image": "https://i.ibb.co.com/8n9Cm6vy/samsung-2tb-t7-usb-portable-ssd-500x500.jpg",
+    "category": "accessories",
+    "price": 129,
+    "description": "Fast portable SSD for secure storage.",
+    "specification": {
+      "capacity": "1TB",
+      "interface": "USB 3.2",
+      "speed": "1050MB/s"
+    },
+    "availability": true,
+    "rating": 4.8
+  }
+]

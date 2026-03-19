@@ -16,9 +16,9 @@ const Hero = () => {
           Shop Now
         </button>
       </div>
-      <figure className="w-9/12 mx-auto p-6 bg-base-100 rounded-4xl border border-red-600 -mt-55     ">
+      <figure className="w-9/12 mx-auto p-6 bg-base-100 rounded-4xl -mt-55">
         <img
-          className="w-full h-[550px] object-cover bg-base-100 rounded-2xl mx-auto"
+          className="w-full h-[550px] object-cover bg-base-100 rounded-2xl mx-auto mb-24"
           src={banner}
           alt=""
         />

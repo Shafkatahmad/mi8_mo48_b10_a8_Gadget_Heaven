@@ -2,10 +2,15 @@ import { useLoaderData } from "react-router";
 import Rating from "../Rating/Rating";
 import { Heart, ShoppingCart } from "lucide-react";
 import SpecificationList from "../SpecificationList/SpecificationList";
+import {
+  storeCartProductsToLocal,
+  storeWishProductsToLocal,
+} from "../../utilities/storeToLocal";
 
 const ProductDetails = () => {
   const product = useLoaderData();
   const {
+    product_id,
     product_image,
     product_title,
     price,
@@ -72,11 +77,19 @@ const ProductDetails = () => {
 
             <div className="flex items-center gap-4">
               <div className="flex items-center border border-red-700">
-                <button className="rounded-4xl bg-[#9538E2] px-5 py-3 text-lg text-white font-bold mt-4 cursor-pointer">
+                <button
+                  onClick={() => storeCartProductsToLocal(product_id)}
+                  className="rounded-4xl bg-[#9538E2] px-5 py-3 text-lg text-white font-bold mt-4 cursor-pointer"
+                >
                   Add To Cart <ShoppingCart></ShoppingCart>
                 </button>
               </div>
-              <Heart className="cursor-pointer"></Heart>
+              <button
+                onClick={() => storeWishProductsToLocal(product_id)}
+                className="cursor-pointer"
+              >
+                <Heart></Heart>
+              </button>
             </div>
           </div>
         </div>

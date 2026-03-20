@@ -9,6 +9,7 @@ import { Component } from "lucide-react";
 import Root from "./Components/Root/Root.jsx";
 import Products from "./Components/Products/Products.jsx";
 import ProductDetails from "./Components/ProductDetails/ProductDetails.jsx";
+import Dashboard from "./Components/Dashboard/Dashboard.jsx";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
         },
         Component: ProductDetails,
         errorElement: <p>wrong</p>,
+      },
+      {
+        path: "dashboard",
+        Component: Dashboard,
       },
     ],
   },

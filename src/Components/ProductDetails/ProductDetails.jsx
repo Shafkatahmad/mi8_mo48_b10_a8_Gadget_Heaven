@@ -79,7 +79,8 @@ const ProductDetails = () => {
               <div className="flex items-center border border-red-700">
                 <button
                   onClick={() => storeCartProductsToLocal(product_id)}
-                  className="rounded-4xl bg-[#9538E2] px-5 py-3 text-lg text-white font-bold mt-4 cursor-pointer"
+                  disabled={!availability}
+                  className="rounded-4xl bg-[#9538E2] px-5 py-3 text-lg text-white font-bold mt-4 cursor-pointer disabled:bg-gray-500 disabled:cursor-not-allowed"
                 >
                   Add To Cart <ShoppingCart></ShoppingCart>
                 </button>

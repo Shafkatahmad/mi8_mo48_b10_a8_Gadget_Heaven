@@ -1,6 +1,7 @@
 import { useState } from "react";
 import CartDashboard from "../CartDashboard/CartDashboard";
 import WishlistDashboard from "../WishlistDashboard/WishlistDashboard";
+import { Helmet } from "react-helmet-async";
 
 const Dashboard = () => {
   const [active, setActive] = useState(true);
@@ -11,6 +12,9 @@ const Dashboard = () => {
   };
   return (
     <div>
+      <Helmet>
+        <title>Dashboard | Gadget Heaven</title>
+      </Helmet>
       <div className="text-center text-white bg-[#9538E2] flex justify-center px-4 py-8">
         <div className="md:w-3/4 lg:w-1/2">
           <h3 className="text-3xl font-bold mb-4">Dashboard</h3>

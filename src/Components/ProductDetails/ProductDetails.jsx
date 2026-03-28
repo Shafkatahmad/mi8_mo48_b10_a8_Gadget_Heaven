@@ -6,6 +6,7 @@ import {
   storeCartProductsToLocal,
   storeWishProductsToLocal,
 } from "../../utilities/storeToLocal";
+import { toast } from "react-toastify";
 
 const ProductDetails = () => {
   const product = useLoaderData();
@@ -78,7 +79,11 @@ const ProductDetails = () => {
             <div className="flex items-center gap-4">
               <div className="flex items-center border border-red-700">
                 <button
-                  onClick={() => storeCartProductsToLocal(product_id)}
+                  onClick={() => {
+                    (storeCartProductsToLocal(product_id),
+                      toast.success("Product added to cart successfully"),
+                      window.dispatchEvent(new Event("cartUpdated")));
+                  }}
                   disabled={!availability}
                   className="rounded-4xl bg-[#9538E2] px-5 py-3 text-lg text-white font-bold mt-4 cursor-pointer disabled:bg-gray-500 disabled:cursor-not-allowed"
                 >
@@ -86,7 +91,10 @@ const ProductDetails = () => {
                 </button>
               </div>
               <button
-                onClick={() => storeWishProductsToLocal(product_id)}
+                onClick={() => {
+                  (storeWishProductsToLocal(product_id),
+                    window.dispatchEvent(new Event("wishlistUpdated")));
+                }}
                 className="cursor-pointer"
               >
                 <Heart></Heart>

@@ -1,7 +1,15 @@
 import { Heart, ShoppingCart } from "lucide-react";
+import { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router";
+import {
+  getCartProductsFromLocal,
+  getWishProductsFromLocal,
+} from "../../utilities/storeToLocal";
 
 const Navbar = () => {
+  const [cartCount, setCartCount] = useState(0);
+  const [wishCount, setWishCount] = useState(0);
+
   const locatoin = useLocation();
   const isHome = locatoin.pathname === "/";
   const links = (
@@ -11,6 +19,30 @@ const Navbar = () => {
       <NavLink to="/dashboard">Dashboard</NavLink>
     </>
   );
+
+  // useEffect(() => {
+  //   const cart = getCartProductsFromLocal();
+  //   const wish = getWishProductsFromLocal();
+
+  //   setCartCount(cart.length);
+  //   setWishCount(wish.length);
+  // }, []);
+
+  // cartlist and wishlist count
+  useEffect(() => {
+    const updateCounts = () => {
+      setCartCount(getCartProductsFromLocal().length);
+      setWishCount(getWishProductsFromLocal().length);
+    };
+
+    window.addEventListener("cartUpdated", updateCounts);
+    window.addEventListener("wishlistUpdated", updateCounts);
+
+    return () => {
+      window.removeEventListener("cartUpdated", updateCounts);
+      window.removeEventListener("wishlistUpdated", updateCounts);
+    };
+  }, []);
   return (
     <div
       className={`navbar rounded-t-4xl lg:px-32 py-4 ${
@@ -51,8 +83,25 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <ShoppingCart className="mr-4" />
-        <Heart />
+        {/* <ShoppingCart className="mr-4" /> */}
+        {/* <Heart /> */}
+        <div className="relative mr-4">
+          <ShoppingCart />
+          {cartCount > 0 && (
+            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-0.5 rounded-full">
+              {cartCount}
+            </span>
+          )}
+        </div>
+
+        <div>
+          <Heart />
+          {wishCount > 0 && (
+            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-0.5 rounded-full">
+              {wishCount}
+            </span>
+          )}
+        </div>
       </div>
     </div>
   );

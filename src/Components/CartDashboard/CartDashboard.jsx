@@ -43,6 +43,8 @@ const CartDashboard = () => {
     setPurchaseTotal(total);
     localStorage.removeItem("cart-products");
     setProducts([]);
+
+    window.dispatchEvent(new Event("cartUpdated"));
   };
   return (
     <div className="bg-gray-200 border border-blue-700">

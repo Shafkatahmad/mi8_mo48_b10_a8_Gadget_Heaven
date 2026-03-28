@@ -10,6 +10,7 @@ import Root from "./Components/Root/Root.jsx";
 import Products from "./Components/Products/Products.jsx";
 import ProductDetails from "./Components/ProductDetails/ProductDetails.jsx";
 import Dashboard from "./Components/Dashboard/Dashboard.jsx";
+import { HelmetProvider } from "react-helmet-async";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <HelmetProvider>
+      <RouterProvider router={router} />
+    </HelmetProvider>
   </StrictMode>,
 );

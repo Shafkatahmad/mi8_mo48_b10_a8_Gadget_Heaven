@@ -39,4 +39,4 @@ const storeWishProductsToLocal = (id) => {
   localStorage.setItem('wish-list', productListStr);
 }
 
-export {storeCartProductsToLocal, storeWishProductsToLocal}
+export {storeCartProductsToLocal, storeWishProductsToLocal, getCartProductsFromLocal, getWishProductsFromLocal}

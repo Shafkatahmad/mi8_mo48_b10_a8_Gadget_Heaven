@@ -1,7 +1,9 @@
 import { Heart, ShoppingCart } from "lucide-react";
-import { NavLink } from "react-router";
+import { NavLink, useLocation } from "react-router";
 
 const Navbar = () => {
+  const locatoin = useLocation();
+  const isHome = locatoin.pathname === "/";
   const links = (
     <>
       <NavLink to="/">Home</NavLink>
@@ -10,7 +12,11 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar bg-[#9538E2] text-white rounded-t-4xl lg:px-32 py-4">
+    <div
+      className={`navbar rounded-t-4xl lg:px-32 py-4 ${
+        isHome ? "bg-[#9538E2] text-white" : "bg-white text-black"
+      }`}
+    >
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

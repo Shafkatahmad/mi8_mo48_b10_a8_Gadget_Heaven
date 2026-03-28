@@ -11,11 +11,13 @@ import Products from "./Components/Products/Products.jsx";
 import ProductDetails from "./Components/ProductDetails/ProductDetails.jsx";
 import Dashboard from "./Components/Dashboard/Dashboard.jsx";
 import { HelmetProvider } from "react-helmet-async";
+import Error404 from "./Components/Error404/Error404.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     Component: Root,
+    errorElement: <Error404></Error404>,
     children: [
       {
         index: true,
